@@ -7,7 +7,7 @@ export default function ListOfArt({ ArtPieceArr }) {
 
       <ul>
         {ArtPieceArr.map((artObj) => {
-          return <ArtPreview ArtPieceObj={artObj} />;
+          return <ArtPreview key={artObj.slug} ArtPieceObj={artObj} />;
         })}
       </ul>
     </div>
