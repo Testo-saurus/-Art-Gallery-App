@@ -43,7 +43,7 @@ export default function ArtPreview({ ArtPieceObj }) {
   const { name, artist, imageSource, year } = ArtPieceObj;
 
   return (
-    <StyledListItem key={ArtPieceObj.slug}>
+    <StyledListItem>
       <article>
         <h4>{name}</h4>
         <Image
