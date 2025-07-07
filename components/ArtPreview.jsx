@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import Image from "next/image";
 import Link from "next/link";
+import FavButton from "./FavButton";
 
 const StyledListItem = styled.li`
   list-style: none;
@@ -16,6 +17,7 @@ const StyledListItem = styled.li`
     transition: transform 0.3s ease;
     background-color: white;
     margin-bottom: 1.5rem;
+    position: relative; /* Add this for absolute positioning of the FavButton */
 
     &:hover {
       transform: translateY(-5px);
@@ -40,13 +42,29 @@ const StyledListItem = styled.li`
   }
 `;
 
-export default function ArtPreview({ ArtPieceObj }) {
-  const { name, artist, imageSource, year, slug } = ArtPieceObj;
+const FavButtonWrapper = styled.div`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+
+  padding: 0.25rem;
+`;
+
+export default function ArtPreview({ artPieceObj, onToggleFav }) {
+  const { name, artist, imageSource, year, slug, isLiked } = artPieceObj;
 
   return (
     <Link href={`/art-pieces/${slug}`}>
       <StyledListItem>
         <article>
+          <FavButtonWrapper>
+            <FavButton
+              slug={slug}
+              isLiked={isLiked}
+              onToggleFav={onToggleFav}
+            />
+          </FavButtonWrapper>
           <h4>{name}</h4>
           <Image
             src={imageSource}

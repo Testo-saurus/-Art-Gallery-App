@@ -1,7 +1,7 @@
 import Spotlight from "@/components/Spotlight";
 
-export default function HomePage({ data }) {
-  const randomIndex = Math.floor(Math.random() * data.length + 1);
+export default function HomePage({ data, onToggleFav }) {
+  const randomIndex = Math.floor(Math.random() * data.length);
 
   console.log(randomIndex);
 
@@ -10,7 +10,7 @@ export default function HomePage({ data }) {
       <div>
         <h1>ART GALLERY</h1>
 
-        <Spotlight ArtPieceObj={data[randomIndex]} />
+        <Spotlight artPieceObj={data[randomIndex]} onToggleFav={onToggleFav} />
       </div>
     </>
   );
