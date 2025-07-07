@@ -1,4 +1,5 @@
 import ArtPreview from "./ArtPreview";
+import Link from "next/link";
 
 export default function ListOfArt({ ArtPieceArr }) {
   return (

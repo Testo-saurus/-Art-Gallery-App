@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const StyledListItem = styled.li`
   list-style: none;
@@ -40,23 +41,25 @@ const StyledListItem = styled.li`
 `;
 
 export default function ArtPreview({ ArtPieceObj }) {
-  const { name, artist, imageSource, year } = ArtPieceObj;
+  const { name, artist, imageSource, year, slug } = ArtPieceObj;
 
   return (
-    <StyledListItem>
-      <article>
-        <h4>{name}</h4>
-        <Image
-          src={imageSource}
-          alt={name}
-          width={300}
-          height={200}
-          style={{ objectFit: "cover" }}
-        />
-        <p>
-          {artist} ({year})
-        </p>
-      </article>
-    </StyledListItem>
+    <Link href={`/art-pieces/${slug}`}>
+      <StyledListItem>
+        <article>
+          <h4>{name}</h4>
+          <Image
+            src={imageSource}
+            alt={name}
+            width={300}
+            height={200}
+            style={{ objectFit: "cover" }}
+          />
+          <p>
+            {artist} ({year})
+          </p>
+        </article>
+      </StyledListItem>
+    </Link>
   );
 }

@@ -1,6 +1,6 @@
-'use client';
-import Link from 'next/link';
-import styled from 'styled-components';
+"use client";
+import Link from "next/link";
+import styled from "styled-components";
 
 const Footer = styled.footer`
   position: fixed;
@@ -37,7 +37,7 @@ export default function Navigation() {
     <Footer>
       <Nav>
         <NavLink href="/art-pieces">Gallery</NavLink>
-        <NavLink href="/spotlight">Spotlight</NavLink>
+        <NavLink href="/">Spotlight</NavLink>
         <NavLink href="/favorites">Favorites</NavLink>
       </Nav>
     </Footer>
