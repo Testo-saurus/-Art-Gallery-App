@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 import Image from "next/image";
 
-const StyledListItem = styled.li`
-  list-style: none;
+const StyledDiv = styled.div`
   margin: auto;
   width: 100%;
   max-width: 500px;
@@ -43,7 +42,7 @@ export default function ArtPreview({ ArtPieceObj }) {
   const { name, artist, imageSource, year } = ArtPieceObj;
 
   return (
-    <StyledListItem>
+    <StyledDiv>
       <article>
         <h4>{name}</h4>
         <Image
@@ -57,6 +56,6 @@ export default function ArtPreview({ ArtPieceObj }) {
           {artist} ({year})
         </p>
       </article>
-    </StyledListItem>
+    </StyledDiv>
   );
 }
