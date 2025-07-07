@@ -1,4 +1,4 @@
-import ArtPreview from "@/components/ArtPreview";
+import Navigation from "@/components/Navigation";
 import Spotlight from "@/components/Spotlight";
 
 export default function HomePage({ data }) {
@@ -7,10 +7,13 @@ export default function HomePage({ data }) {
   console.log(randomIndex);
 
   return (
+    <>
     <div>
       <h1>ART GALLERY</h1>
 
       <Spotlight ArtPieceObj={data[randomIndex]} />
     </div>
+    <Navigation/>
+    </>
   );
 }
