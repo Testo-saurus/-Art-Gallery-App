@@ -10,11 +10,15 @@ const StyledUnorderedList = styled.ul`
   max-width: 1100px; /* optional max width to center */
   list-style: none;
 `;
+
+const PageWrapper = styled.main`
+  padding-bottom: 6rem;
+  padding-top: 1rem;
+`;
+
 export default function ListOfArt({ artPieceArr, onToggleFavorite }) {
   return (
-    <div>
-      <h1>List</h1>
-
+    <PageWrapper>
       <StyledUnorderedList>
         {artPieceArr.map((artObj) => {
           return (
@@ -26,6 +30,6 @@ export default function ListOfArt({ artPieceArr, onToggleFavorite }) {
           );
         })}
       </StyledUnorderedList>
-    </div>
+    </PageWrapper>
   );
 }
