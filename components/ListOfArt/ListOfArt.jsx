@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ArtPreview from "./ArtPreview";
+import ArtPreview from "../ArtPreview/ArtPreview";
 
 const StyledUnorderedList = styled.ul`
   display: flex;

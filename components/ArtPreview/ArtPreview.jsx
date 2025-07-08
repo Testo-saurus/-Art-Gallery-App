@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
-import FavoriteButton from "./FavoriteButton";
+import FavoriteButton from "../FavoriteButton/FavoriteButton";
 
 const StyledListItem = styled.li`
   list-style: none;

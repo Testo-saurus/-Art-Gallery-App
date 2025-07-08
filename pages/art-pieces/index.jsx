@@ -1,4 +1,4 @@
-import ListOfArt from "@/components/ListOfArt";
+import ListOfArt from "@/components/ListOfArt/ListOfArt";
 
 export default function ArtGallery({ data, onToggleFavorite }) {
   return (

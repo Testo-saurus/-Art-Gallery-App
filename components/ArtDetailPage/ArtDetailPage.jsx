@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
-import FavoriteButton from "./FavoriteButton";
+import FavoriteButton from "../FavoriteButton/FavoriteButton";
 
 const Container = styled.div`
   max-width: 1200px;

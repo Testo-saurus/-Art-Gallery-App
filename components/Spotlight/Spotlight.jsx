@@ -1,4 +1,4 @@
-import ArtPreview from "./ArtPreview";
+import ArtPreview from "../ArtPreview/ArtPreview";
 
 export default function Spotlight({ artPieceObj, onToggleFavorite }) {
 
