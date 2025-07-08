@@ -17,7 +17,7 @@ const Button = styled.button`
   }
 
   &:hover {
-    color: ${(props) => (props.isFavorite ? "#cc0000" : "#555")};
+    color: ${(props) => (props.$isFavorite ? "#cc0000" : "#555")};
 
     svg {
       transform: scale(1.1);
@@ -25,11 +25,13 @@ const Button = styled.button`
   }
 `;
 
+
+
 export default function FavoriteButton({ isFavorite, onToggleFavorite, slug }) {
   return (
     <Button
       onClick={() => onToggleFavorite(slug)}
-      isFavorite={isFavorite}
+      $isFavorite={isFavorite}
       aria-label="Toggle Favorite"
     >
       <Heart

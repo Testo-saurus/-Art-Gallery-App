@@ -1,4 +1,4 @@
-import Spotlight from "@/components/Spotlight";
+import Spotlight from "@/components/Spotlight/Spotlight";
 import { useState } from "react";
 
 export default function HomePage({ data, onToggleFavorite }) {

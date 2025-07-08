@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ArtPreview from "@/components/ArtPreview";
+import ArtPreview from "@/components/ArtPreview/ArtPreview";
 
 const Heading = styled.h1`
   text-align: center;

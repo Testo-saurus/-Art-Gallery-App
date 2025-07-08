@@ -1,4 +1,4 @@
-import ArtDetailPage from "@/components/ArtDetailPage";
+import ArtDetailPage from "@/components/ArtDetailPage/ArtDetailPage";
 import { useRouter } from "next/router";
 
 export default function DynamicPage({ data, onToggleFavorite }) {
