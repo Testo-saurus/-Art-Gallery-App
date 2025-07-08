@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
-import FavButton from "./FavButton";
+import FavoriteButton from "./FavoriteButton";
 
 const Container = styled.div`
   max-width: 1200px;
@@ -51,15 +51,15 @@ const InfoText = styled.p`
   margin: 0.5rem 0;
 `;
 
-const FavButtonWrapper = styled.div`
+const FavoriteButtonWrapper = styled.div`
   position: absolute;
   top: 1rem;
   right: 1rem;
   z-index: 10;
 `;
 
-export default function ArtDetailPage({ artPieceObj, onToggleFav }) {
-  const { name, artist, imageSource, year, genre, slug, isLiked } = artPieceObj;
+export default function ArtDetailPage({ artPieceObj, onToggleFavorite }) {
+  const { name, artist, imageSource, year, genre, slug, isFavorite } = artPieceObj;
   const router = useRouter();
 
   return (
@@ -69,9 +69,9 @@ export default function ArtDetailPage({ artPieceObj, onToggleFav }) {
       </BackLink>
 
       <Article>
-        <FavButtonWrapper>
-          <FavButton onToggleFav={onToggleFav} slug={slug} isLiked={isLiked} />
-        </FavButtonWrapper>
+        <FavoriteButtonWrapper>
+          <FavoriteButton onToggleFavorite={onToggleFavorite} slug={slug} isFavorite={isFavorite} />
+        </FavoriteButtonWrapper>
 
         <Title>{name}</Title>
         <StyledImage

@@ -1,11 +1,11 @@
 import ListOfArt from "@/components/ListOfArt";
 
-export default function ArtGallery({ data, onToggleFav }) {
+export default function ArtGallery({ data, onToggleFavorite }) {
   return (
     <div>
-      <h1>ART GALLERY</h1>
+      <h1>Art Gallery</h1>
 
-      <ListOfArt artPieceArr={data} onToggleFav={onToggleFav} />
+      <ListOfArt artPieceArr={data} onToggleFavorite={onToggleFavorite} />
     </div>
   );
 }
