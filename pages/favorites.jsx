@@ -26,12 +26,12 @@ const Message = styled.p`
 `;
 
 export default function FavoritesPage({ data, onToggleFavorite }) {
-  // Filter only the favorite art pieces
+  //Filter only the favorite art pieces
   const favoritePieces = data.filter((piece) => piece.isFavorite);
 
   return (
     <>
-      <h1 style={{ textAlign: "center", marginTop: "2rem" }}>Your Favorite Art Pieces</h1>
+      <Heading>Your Favorite Art Pieces</Heading>
 
       {favoritePieces.length === 0 ? (
         <Message>You have no favorites yet. Start adding some from the gallery!</Message>
