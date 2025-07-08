@@ -50,7 +50,7 @@ const FavoriteButtonWrapper = styled.div`
 `;
 
 export default function ArtPreview({ artPieceObj, onToggleFavorite }) {
-  const { name, artist, imageSource, year, slug } = artPieceObj;
+  const { name, artist, imageSource, year, slug, isFavorite } = artPieceObj;
 
   return (
     <StyledListItem>
@@ -58,7 +58,7 @@ export default function ArtPreview({ artPieceObj, onToggleFavorite }) {
         <FavoriteButtonWrapper>
           <FavoriteButton
             slug={slug}
-            isFavorite={artPieceObj.isFavorite}
+            isFavorite={isFavorite}
             onToggleFavorite={onToggleFavorite}
           />
         </FavoriteButtonWrapper>
