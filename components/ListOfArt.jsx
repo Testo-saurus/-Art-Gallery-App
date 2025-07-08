@@ -1,22 +1,31 @@
+import styled from "styled-components";
 import ArtPreview from "./ArtPreview";
-import Link from "next/link";
 
-export default function ListOfArt({ artPieceArr, onToggleFav }) {
+const StyledUnorderedList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;         /* spacing between items */
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1100px; /* optional max width to center */
+  list-style: none;
+`;
+export default function ListOfArt({ artPieceArr, onToggleFavorite }) {
   return (
     <div>
       <h1>List</h1>
 
-      <ul>
+      <StyledUnorderedList>
         {artPieceArr.map((artObj) => {
           return (
             <ArtPreview
               key={artObj.slug}
               artPieceObj={artObj}
-              onToggleFav={onToggleFav}
+              onToggleFavorite={onToggleFavorite}
             />
           );
         })}
-      </ul>
+      </StyledUnorderedList>
     </div>
   );
 }
