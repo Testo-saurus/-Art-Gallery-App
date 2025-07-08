@@ -1,7 +1,7 @@
 import GlobalStyle from "../styles";
 import useSWR from "swr";
-import Navigation from "../components/Navigation";
 import useLocalStorageState from "use-local-storage-state";
+import Navigation from "@/components/Navigation/Navigation";
 
 const URL = "https://example-apis.vercel.app/api/art";
 
