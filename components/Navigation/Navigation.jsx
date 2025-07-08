@@ -20,7 +20,7 @@ const NavLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
+  text-decoration: ${(props) => (props.$isActive ? "underline" : "none")};
   font-weight: 600;
   font-size: 1.5rem;
   color: ${(props) => (props.$isActive ? "rgb(40, 103, 201)" : "#888")};
