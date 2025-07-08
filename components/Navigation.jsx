@@ -23,7 +23,7 @@ const NavLink = styled(Link)`
   text-decoration: none;
   font-weight: 600;
   font-size: 1.5rem;
-  color: ${(props) => (props.$isActive ? "#2867c9" : "#888")};
+  color: ${(props) => (props.$isActive ? "rgb(40, 103, 201)" : "#888")};
   background-color: ${(props) => (props.$isActive ? "#c4d9ff" : "transparent")};
   transition: background-color 0.3s ease, color 0.3s ease;
   border-left: 1px solid #e0e0e0;
